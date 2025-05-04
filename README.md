@@ -13,9 +13,11 @@ The package provides tools to:
 ## 📘 Full Documentation
 
 [Click here to download help_otsuSeg.R.pdf](https://olgaviedma.github.io/OtsuSeg/help_otsuSeg.R.pdf)
-
-
 This documentation includes examples, illustrations, and step-by-step workflows to guide the use of the package.
+
+## Authors
+Hammadi Achour, Olga Viedma, Zina Soltani, Imene Habibi, Wahbi Jaouadi
+
 
 ## 📦 Installation
 
