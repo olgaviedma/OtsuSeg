@@ -33,11 +33,11 @@ NBRpost<-raster(NBRpost)
 ```
 ## 📘 Full Documentation
 
-The HTML file is hosted at:
-https://olgaviedma.github.io/OtsuSeg/
+- 👉 [Click here to view the full HTML help file](https://olgaviedma.github.io/OtsuSeg/)
+- 📄 [Download PDF version of the help](https://olgaviedma.github.io/OtsuSeg/help_otsuSeg.R.pdf)
 
-The PDF file is hosted at:
-https://olgaviedma.github.io/OtsuSeg/help_otsuSeg.R.pdf
+This documentation includes examples, illustrations, and step-by-step workflows to guide the use of the package.
+
 
 This documentation includes examples, illustrations, and step-by-step workflows to guide the use of the package.
 
