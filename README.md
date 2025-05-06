@@ -25,14 +25,17 @@ library(OtsuSeg)
 get_external_data()
 
 # Load a specific file as a raster object
-pre_fire <- get_external_data("NBRpre.tif", load = TRUE)
-post_fire <- get_external_data("NBRpost.tif", load = TRUE)
+pre_fire <- get_external_data("NBRpre")
+post_fire <- get_external_data("NBRpost")
 
 ```
 ## 📘 Full Documentation
 
-- 👉 [Click here to view the full HTML help file](https://olgaviedma.github.io/OtsuSeg/)
-- 📄 [Download PDF version of the help](https://olgaviedma.github.io/OtsuSeg/help_otsuSeg.R.pdf)
+The HTML file is hosted at:
+https://olgaviedma.github.io/OtsuSeg/
+
+The PDF file is hosted at:
+https://olgaviedma.github.io/OtsuSeg/help_otsuSeg.R.pdf
 
 This documentation includes examples, illustrations, and step-by-step workflows to guide the use of the package.
 
