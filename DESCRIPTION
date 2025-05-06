@@ -1,13 +1,13 @@
 Package: OtsuSeg
 Type: Package
-Title: Raster Thresholding Using Otsu's algorithm
+Title: Raster Thresholding Using 'Otsu' algorithm
 Version: 0.1.0
 Authors@R: c(person("Hammadi, Achour", email = "hammadi.achour@gmail.com", role = c("aut")),
     person("Olga", "Viedma", email = "olga.viedma@uclm.es", role = c("ctb", "cre")),
     person("Zina", "Soltani", email = "zina12soltani@gmail.com", role = "ctb"),
     person("Imene", "Habibi", email = "imene.habibi@cuniv-naama.dz", role = "ctb"),
     person("Wahbi", "Jaouadi", email = "jaouadiwahbi@gmail.com", role = "ctb"))
-Description: Provides tools to process raster data and apply Otsu-based thresholding for burned area mapping and other image segmentation tasks.
+Description: Provides tools to process raster data and apply 'Otsu' thresholding for burned area mapping and other image segmentation tasks.
 Encoding: UTF-8
 License: GPL-3
 Depends: R (>= 3.0.0)
@@ -18,10 +18,5 @@ Suggests:
 RoxygenNote: 7.3.2
 NeedsCompilation: no
 Packaged: 2025-05-05 21:47:21 UTC; achour
-Author: Hammadi Achour [aut],
-  Olga Viedma [ctb, cre],
-  Zina Soltani [ctb],
-  Imene Habibi [ctb],
-  Wahbi Jaouadi [ctb]
 Maintainer: Olga Viedma <olga.viedma@uclm.es>
 Config/testthat/edition: 3
