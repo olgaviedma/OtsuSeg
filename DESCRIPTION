@@ -1,6 +1,6 @@
 Package: OtsuSeg
 Type: Package
-Title: Raster Thresholding Using 'Otsu' algorithm
+Title: Raster Thresholding Using 'Otsu' Algorithm
 Version: 0.1.0
 Authors@R: c(person("Hammadi, Achour", email = "hammadi.achour@gmail.com", role = c("aut")),
     person("Olga", "Viedma", email = "olga.viedma@uclm.es", role = c("ctb", "cre")),
