@@ -1,9 +1,9 @@
 {
     "left": {
-        "splitterpos": 440,
+        "splitterpos": 340,
         "topwindowstate": "HIDE",
-        "panelheight": 1063,
-        "windowheight": 1101
+        "panelheight": 823,
+        "windowheight": 861
     },
     "right": {
         "splitterpos": 511,
