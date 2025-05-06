@@ -2,6 +2,8 @@
 
 **OtsuSeg** is an R package designed for the segmentation of burned areas using smoothed histograms and Otsu's thresholding method applied to spectral indices such as the Normalized Burn Ratio (NBR).
 
+**Authors:** Hammadi Achour, Olga Viedma, Zina Soltani, Imene Habibi, Wahbi Jaouadi
+
 ## 🔍 Overview
 
 The package provides tools to:
@@ -38,8 +40,12 @@ NBRpost<-raster(NBRpost)
 
 This documentation includes examples, illustrations, and step-by-step workflows to guide the use of the package.
 
+🛈 **Note:** If the links stop working after the first click, this is a known issue with GitHub Pages navigation and browser cache.  
+To return to the repository and reload the links:
+- Click the **GitHub logo** in the top-left of the browser.
+- Or go directly to [https://github.com/olgaviedma/OtsuSeg](https://github.com/olgaviedma/OtsuSeg) and re-click the links.
 
-**Authors:** Hammadi Achour, Olga Viedma, Zina Soltani, Imene Habibi, Wahbi Jaouadi
+The links are correct and stable, but the browser may cache or misroute when going back from GitHub Pages.
 
 
 ## 📦 Installation
