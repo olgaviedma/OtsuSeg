@@ -25,8 +25,10 @@ library(OtsuSeg)
 get_external_data()
 
 # Load a specific file as a raster object
-pre_fire <- get_external_data("NBRpre")
-post_fire <- get_external_data("NBRpost")
+NBRpre <- get_external_data("NBRpre")
+NBRpost <- get_external_data("NBRpost")
+NBRpre<-raster(NBRpre)
+NBRpost<-raster(NBRpost)
 
 ```
 ## 📘 Full Documentation
