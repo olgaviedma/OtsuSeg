@@ -29,11 +29,13 @@ pre_fire <- get_external_data("NBRpre.tif", load = TRUE)
 post_fire <- get_external_data("NBRpost.tif", load = TRUE)
 
 ```
-
 ## 📘 Full Documentation
 
-[Click here to view the full HTML help file](https://olgaviedma.github.io/OtsuSeg/index.html)  
-[Download PDF documentation](https://olgaviedma.github.io/OtsuSeg/help_otsuSeg.R.pdf)
+[📖 View HTML Help File](https://olgaviedma.github.io/OtsuSeg/help_otsuSeg.html)  
+[📄 Download PDF Documentation](https://olgaviedma.github.io/OtsuSeg/help_otsuSeg.R.pdf)
+
+This documentation includes examples, illustrations, and step-by-step workflows to guide the use of the package.
+
 
 This documentation includes examples, illustrations, and step-by-step workflows to guide the use of the package.
 
