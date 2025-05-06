@@ -33,9 +33,6 @@ NBRpost<-raster(NBRpost)
 ```
 ## 📘 Full Documentation
 
-<!-- Trigger rebuild -->
-
-
 The HTML file is hosted at:
 https://olgaviedma.github.io/OtsuSeg/
 
