@@ -33,6 +33,9 @@ NBRpost<-raster(NBRpost)
 ```
 ## 📘 Full Documentation
 
+<!-- Trigger rebuild -->
+
+
 The HTML file is hosted at:
 https://olgaviedma.github.io/OtsuSeg/
 
@@ -47,9 +50,12 @@ This documentation includes examples, illustrations, and step-by-step workflows 
 
 ## 📦 Installation
 
-To install the latest version of `OtsuSeg` from GitHub:
+To install the latest version of `OtsuSeg`:
 
 ```r
+#The CRAN version:
+install.packages("OtsuSeg")
+
 # Install the 'remotes' package if not already installed
 install.packages("remotes")
 
