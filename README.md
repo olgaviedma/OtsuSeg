@@ -32,7 +32,9 @@ post_fire <- get_external_data("NBRpost.tif", load = TRUE)
 
 ## 📘 Full Documentation
 
-[Click here to download help_otsuSeg.R.pdf](https://olgaviedma.github.io/OtsuSeg/)
+[Click here to view the full HTML help file](https://olgaviedma.github.io/OtsuSeg/index.html)  
+[Download PDF documentation](https://olgaviedma.github.io/OtsuSeg/help_otsuSeg.R.pdf)
+
 This documentation includes examples, illustrations, and step-by-step workflows to guide the use of the package.
 
 **Authors:** Hammadi Achour, Olga Viedma, Zina Soltani, Imene Habibi, Wahbi Jaouadi
