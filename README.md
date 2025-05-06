@@ -39,9 +39,6 @@ NBRpost<-raster(NBRpost)
 This documentation includes examples, illustrations, and step-by-step workflows to guide the use of the package.
 
 
-This documentation includes examples, illustrations, and step-by-step workflows to guide the use of the package.
-
-
 **Authors:** Hammadi Achour, Olga Viedma, Zina Soltani, Imene Habibi, Wahbi Jaouadi
 
 
