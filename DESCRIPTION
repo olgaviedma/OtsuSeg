@@ -7,7 +7,7 @@ Authors@R: c(person("Hammadi, Achour", email = "hammadi.achour@gmail.com", role 
     person("Zina", "Soltani", email = "zina12soltani@gmail.com", role = "ctb"),
     person("Imene", "Habibi", email = "imene.habibi@cuniv-naama.dz", role = "ctb"),
     person("Wahbi", "Jaouadi", email = "jaouadiwahbi@gmail.com", role = "ctb"))
-Description: Automated detection and analysis of burnt areas using Otsu’s global thresholding technique applied to spectral indices such as the Normalised Burn Ratio (NBR). This tool facilitates the segmentation of pre- and post-fire optical imagery, enabling users to efficiently extract forest fire scars. The package includes validation functions to assess segmentation accuracy against reference data using standard accuracy metrics such as precision, recall, and F1-score
+Description: Provides tools to process raster data and apply Otsu-based thresholding for burned area mapping and other image segmentation tasks. Implements the method described by Otsu (1979) <doi:10.1109/TSMC.1979.4310076>, a data-driven technique that determines an optimal threshold by maximizing the inter-class variance of pixel intensities. It includes validation functions to assess segmentation accuracy against reference data using standard accuracy metrics such as precision, recall, and F1-score.
 URL: https://github.com/olgaviedma/OtsuSeg
 Encoding: UTF-8
 License: GPL-3

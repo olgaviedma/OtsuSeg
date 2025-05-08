@@ -20,7 +20,7 @@
 #' @importFrom sf st_as_sf st_write
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'   pre_fire <- get_external_data("NBRpre", load = TRUE)
 #'   post_fire <- get_external_data("NBRpost", load = TRUE)
 #'   result <- binarize_raster(post_fire, pre_fire)
@@ -31,6 +31,10 @@ binarize_raster <- function(x, y, output_shapefile = TRUE, shapefile_path = "bin
   if (!inherits(x, "RasterLayer") | !inherits(y, "RasterLayer")) {
     stop("Both x and y must be RasterLayer objects.")
   }
+
+  # Preserve original graphics settings
+  oldpar <- graphics::par(no.readonly = TRUE)
+  on.exit(graphics::par(oldpar))
 
   # Compute deltaNBR
   deltaNBR <- x - y
@@ -71,7 +75,7 @@ binarize_raster <- function(x, y, output_shapefile = TRUE, shapefile_path = "bin
   # If output_shapefile is TRUE, save the shapefile to disk
   if (output_shapefile) {
     sf::st_write(binary_sf, shapefile_path)
-    cat("Shapefile saved to", shapefile_path, "\n")
+    message("Shapefile saved to ", shapefile_path)
   }
 
   # Compute interclass variance for all threshold values using the same approach as in otsu_threshold_smoothed

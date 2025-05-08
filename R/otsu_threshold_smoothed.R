@@ -7,7 +7,7 @@
 #' @param mids A numeric vector of histogram bin midpoints.
 #' @return The optimal threshold value.
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'   hist_vals <- hist(rnorm(1000), plot = FALSE)$counts
 #'   mids <- hist(rnorm(1000), plot = FALSE)$mids
 #'   threshold <- otsu_threshold_smoothed(hist_vals, mids)

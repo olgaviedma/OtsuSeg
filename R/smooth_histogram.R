@@ -7,7 +7,7 @@
 #' @return A numeric vector of smoothed histogram counts.
 #' @importFrom zoo rollapply
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'   raw_counts <- hist(rnorm(1000), plot = FALSE)$counts
 #'   smoothed <- smooth_histogram(raw_counts)
 #'   plot(smoothed, type = "l", col = "blue")

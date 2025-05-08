@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'   binary_shape <- sf::st_read("binary_shape.shp")
 #'   reference_shape <- sf::st_read("reference_shape.shp")
 #'   result <- Quality_control(binary_shape, reference_shape)
