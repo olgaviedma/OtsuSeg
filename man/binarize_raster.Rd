@@ -12,32 +12,38 @@ binarize_raster(
 )
 }
 \arguments{
-\item{x}{A raster layer object representing post-fire NBR (e.g., `raster::RasterLayer`).}
+\item{x}{RasterLayer. A raster layer object representing pre-fire NBR (e.g., `raster::RasterLayer`).}
 
-\item{y}{A raster layer object representing pre-fire NBR (e.g., `raster::RasterLayer`).}
+\item{y}{RasterLayer. A raster layer object representing post-fire NBR (e.g., `raster::RasterLayer`).}
 
-\item{output_shapefile}{Logical. Whether to save the binary result as a shapefile. Default is TRUE.}
+\item{output_shapefile}{Logical. If TRUE, saves the binary raster as a shapefile. Default is TRUE.}
 
 \item{shapefile_path}{Character. Path to save the shapefile. Used only if output_shapefile is TRUE.}
 }
 \value{
 A list containing:
-  \item{best_threshold}{The computed Otsu threshold.}
-  \item{area_hectares}{Estimated burned area in hectares.}
-  \item{binary_raster_smoothed}{The binary raster layer created using the Otsu threshold.}
-  \item{plots}{A list of plots: histogram and inter/intra-class variance plot.}
+  \item{best_threshold}{Numeric. The computed Otsu threshold value.}
+  \item{area_hectares}{Numeric. The estimated burned area in hectares.}
+  \item{binary_raster_smoothed}{RasterLayer. The binary raster created using the Otsu threshold.}
+  \item{binary_shapefile}{sf object. The binary shapefile created, if output_shapefile is TRUE.}
+  \item{shapefile_path}{Character. Path where the shapefile was saved, if output_shapefile is TRUE.}
 }
 \description{
-This function computes deltaNBR, rescales it, applies a smoothed histogram,
-and uses Otsu's thresholding to create a binary raster representing burn scars.
-It also plots the smoothed histogram, inter-class variance curve, and the
+This function computes deltaNBR (difference between post-fire and pre-fire NBR), rescales it,
+applies a smoothed histogram, and uses Otsu's thresholding to create a binary raster representing burn scars.
+It also generates and saves plots of the smoothed histogram, inter-class variance curve, and the
 inter-class and intra-class variance curves on separate plots.
 }
 \examples{
-\dontrun{
-  pre_fire <- get_external_data("NBRpre", load = TRUE)
-  post_fire <- get_external_data("NBRpost", load = TRUE)
-  result <- binarize_raster(post_fire, pre_fire)
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+#For CRAN checks, a temporary directory is used to avoid leaving files.
+#For permanent use, specify a path like "results/binary_raster.shp"
+  pre_fire <- get_external_data("NBRpre.tif", load = TRUE)
+  post_fire <- get_external_data("NBRpost.tif", load = TRUE)
+  shapefile_path <- file.path(tempdir(), "binary_raster.shp")
+  result <- binarize_raster(pre_fire, post_fire, shapefile_path = shapefile_path)
   print(result$area_hectares)
-}
+  # Clean up (optional)
+  unlink(list.files(tempdir(), pattern = "binary_raster\\\\.(shp|shx|dbf|prj)$", full.names = TRUE))
+\dontshow{\}) # examplesIf}
 }

@@ -1,7 +1,8 @@
-#' Otsu's Thresholding with Smoothed Histogram:
-#'
-#' This function applies Otsu's thresholding to a smoothed histogram to determine the optimal threshold
-#' for image segmentation.
+#' @keywords internal
+#' @title Otsu's Thresholding with Smoothed Histogram
+#' @description
+#' This is an internal function that applies Otsu's thresholding to a smoothed histogram to determine the optimal threshold
+#' for image segmentation. It is not intended for direct use by package users.
 #'
 #' @param hist_vals A numeric vector of histogram counts.
 #' @param mids A numeric vector of histogram bin midpoints.

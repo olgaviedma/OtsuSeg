@@ -12,7 +12,7 @@ test_that("binarize_raster computes threshold and area from synthetic rasters", 
   values(r_pre) <- runif(ncell(r_pre), min = 0.4, max = 0.8)
   values(r_post) <- runif(ncell(r_post), min = 0.1, max = 0.6)
 
-  # Llamar a la función
+  # Llamar a la función SIN shapefile
   result <- binarize_raster(r_post, r_pre, output_shapefile = FALSE)
 
   # Comprobar que los elementos existen y tienen el tipo esperado
@@ -23,6 +23,11 @@ test_that("binarize_raster computes threshold and area from synthetic rasters", 
   expect_true(result$area_hectares > 0)
 
   expect_s4_class(result$binary_raster_smoothed, "RasterLayer")
-  expect_s3_class(result$binary_shapefile, "sf")
-})
+  expect_null(result$binary_shapefile)  # No debe existir shapefile
 
+  # Llamar a la función CON shapefile
+  result_with_shp <- binarize_raster(r_post, r_pre, output_shapefile = TRUE, shapefile_path = tempfile(fileext = ".shp"))
+
+  # Comprobar que el shapefile existe y es de clase sf
+  expect_s3_class(result_with_shp$binary_shapefile, "sf")
+})

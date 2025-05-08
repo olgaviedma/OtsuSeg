@@ -2,7 +2,7 @@
 % Please edit documentation in R/otsu_threshold_smoothed.R
 \name{otsu_threshold_smoothed}
 \alias{otsu_threshold_smoothed}
-\title{Otsu's Thresholding with Smoothed Histogram:}
+\title{Otsu's Thresholding with Smoothed Histogram}
 \usage{
 otsu_threshold_smoothed(hist_vals, mids)
 }
@@ -15,14 +15,15 @@ otsu_threshold_smoothed(hist_vals, mids)
 The optimal threshold value.
 }
 \description{
-This function applies Otsu's thresholding to a smoothed histogram to determine the optimal threshold
-for image segmentation.
+This is an internal function that applies Otsu's thresholding to a smoothed histogram to determine the optimal threshold
+for image segmentation. It is not intended for direct use by package users.
 }
 \examples{
-\dontrun{
+\donttest{
   hist_vals <- hist(rnorm(1000), plot = FALSE)$counts
   mids <- hist(rnorm(1000), plot = FALSE)$mids
   threshold <- otsu_threshold_smoothed(hist_vals, mids)
   print(threshold)
 }
 }
+\keyword{internal}

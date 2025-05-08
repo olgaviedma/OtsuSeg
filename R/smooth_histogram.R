@@ -1,6 +1,8 @@
-#' Smooth Histogram Data:
-#'
-#' Applies a moving average filter to smooth a histogram.
+#' @keywords internal
+#' @title Smooth Histogram Data
+#' @description
+#' This is an internal function that applies a moving average filter to smooth a histogram.
+#' It is not intended for direct use by package users.
 #'
 #' @param hist_counts A numeric vector of histogram bin counts.
 #' @param window_size An integer specifying the smoothing window size (default is 5).

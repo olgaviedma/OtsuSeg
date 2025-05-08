@@ -11,11 +11,27 @@ get_external_data(filename = NULL, path = tempdir(), load = FALSE)
 
 \item{path}{Local directory to download and extract files. Default is a temp folder.}
 
-\item{load}{Logical. If TRUE, returns a loaded raster object (only for .tif). Default is FALSE.}
+\item{load}{Logical. If TRUE, returns a loaded object (RasterLayer for .tif, sf for .shp). Default is FALSE.}
 }
 \value{
 File path or loaded object if `load = TRUE`.
 }
 \description{
-Downloads a ZIP file with example rasters from GitHub releases and optionally loads a specific file.
+Downloads a ZIP file with example rasters and shapefiles from GitHub releases and optionally loads a specific file.
+}
+\examples{
+\donttest{
+# Download example data and list contents
+data_dir <- get_external_data(path = tempdir())
+list.files(data_dir)
+
+# Load a specific raster file (.tif)
+pre_fire <- get_external_data("NBRpre.tif", path = tempdir(), load = TRUE)
+print(pre_fire)
+
+# Load a specific shapefile (.shp)
+shape_data <- get_external_data("shapefile_reference.shp", path = tempdir(), load = TRUE)
+print(shape_data)
+}
+
 }

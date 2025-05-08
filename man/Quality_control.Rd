@@ -12,20 +12,41 @@ Quality_control(binary_shape, reference_shape, metrics = NULL)
 \item{reference_shape}{A shapefile (sf object) representing the reference vector shape (e.g., actual burn scars).}
 
 \item{metrics}{A vector of metric names to calculate. If NULL, all available metrics are computed.
-Available metrics are: "Precision", "Recall", "F1_Score", "IoU", "OS", "US", "E",
-"SimSize", "Loc", and "AFI". Default is NULL, which computes all metrics.}
+Available metrics are:
+- "Precision": The proportion of the detected shape that correctly overlaps the reference.
+- "Recall": The proportion of the reference shape that is correctly detected.
+- "F1_Score": The harmonic mean of Precision and Recall, balancing both.
+- "IoU" (Intersection over Union): The ratio of the intersection area to the union area.
+- "OS" (Omission Error): The proportion of the reference shape that was missed (1 - Recall).
+- "US" (Commission Error): The proportion of the detected shape that is false (1 - Precision).
+- "E" (Overall Error): The combined error of omission and commission.
+- "SimSize" (Size Similarity): The relative similarity in size between the two shapes.
+- "Loc" (Location Error): The Euclidean distance between the centroids of the two shapes.
+- "AFI" (Area Fit Index): The ratio of the intersection area to the difference between total areas.
+Default is NULL, which computes all metrics.}
 }
 \value{
 A data frame containing the computed metrics and their values.
 }
 \description{
-This function calculates various metrics (e.g., precision, recall, F1 score)
-to compare a binary raster (in shapefile format) with a reference vector shape.
+This function calculates various metrics (e.g., Precision, Recall, F1 Score)
+to quantitatively compare a binary raster (in shapefile format) with a reference vector shape.
+It provides insights into how well the detected (binary) shape matches the reference shape.
 }
 \examples{
-\dontrun{
-  binary_shape <- sf::st_read("binary_shape.shp")
-  reference_shape <- sf::st_read("reference_shape.shp")
+\donttest{
+library(sf)
+  # Create a simple binary shape (square)
+  binary_shape <- st_as_sf(st_sfc(st_polygon(list(rbind(
+    c(0, 0), c(1, 0), c(1, 1), c(0, 1), c(0, 0)
+  )))))
+
+  # Create a reference shape (slightly shifted square)
+  reference_shape <- st_as_sf(st_sfc(st_polygon(list(rbind(
+    c(0.1, 0.1), c(1.1, 0.1), c(1.1, 1.1), c(0.1, 1.1), c(0.1, 0.1)
+  )))))
+
+  # Apply Quality Control
   result <- Quality_control(binary_shape, reference_shape)
   print(result)
 }

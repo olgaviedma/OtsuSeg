@@ -2,7 +2,7 @@
 % Please edit documentation in R/smooth_histogram.R
 \name{smooth_histogram}
 \alias{smooth_histogram}
-\title{Smooth Histogram Data:}
+\title{Smooth Histogram Data}
 \usage{
 smooth_histogram(hist_counts, window_size = 5)
 }
@@ -15,12 +15,14 @@ smooth_histogram(hist_counts, window_size = 5)
 A numeric vector of smoothed histogram counts.
 }
 \description{
-Applies a moving average filter to smooth a histogram.
+This is an internal function that applies a moving average filter to smooth a histogram.
+It is not intended for direct use by package users.
 }
 \examples{
-\dontrun{
+\donttest{
   raw_counts <- hist(rnorm(1000), plot = FALSE)$counts
   smoothed <- smooth_histogram(raw_counts)
   plot(smoothed, type = "l", col = "blue")
 }
 }
+\keyword{internal}
